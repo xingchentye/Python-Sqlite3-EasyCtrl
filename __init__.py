@@ -1,1 +1,1 @@
-from SqliteEasyCtrl.main import DataBaseSqlit
+from SqliteEasyCtrl import DataBaseSqlit
