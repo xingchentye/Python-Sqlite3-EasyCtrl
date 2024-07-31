@@ -1,2 +1,0 @@
-import SqliteEasyCtrl
-SqliteEasyCtrl.DataBaseSqlit

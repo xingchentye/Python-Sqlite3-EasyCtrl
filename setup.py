@@ -7,7 +7,7 @@ with open("version", "r", encoding="utf-8") as f:
     version = f.read().strip()
  
 setuptools.setup(
-    name="Python-Sqlite3-EasyCtrl",
+    name="Sqlite3_EasyCtrl",
     version=version,
     author="xingchen",
     author_email="xingchenawa@qq.com",
