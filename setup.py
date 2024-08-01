@@ -1,5 +1,4 @@
-import setuptools #导入setuptools打包工具
- 
+import setuptools
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
@@ -18,7 +17,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: BSD 3-Clause License",
+        "License :: OSI Approved :: BSD License",
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
