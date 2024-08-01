@@ -6,7 +6,7 @@ with open("version", "r", encoding="utf-8") as f:
     version = f.read()
  
 setuptools.setup(
-    name="SqliteEasyCtrl",
+    name="sqlite_easy_ctrl",
     version=version,
     author="xingchen",
     author_email="xingchenawa@qq.com",
