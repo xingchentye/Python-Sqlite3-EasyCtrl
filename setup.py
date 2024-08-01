@@ -4,10 +4,10 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 with open("version", "r", encoding="utf-8") as f:
-    version = f.read().strip()
+    version = f.read()
  
 setuptools.setup(
-    name="Sqlite3_EasyCtrl",
+    name="SqliteEasyCtrl",
     version=version,
     author="xingchen",
     author_email="xingchenawa@qq.com",
