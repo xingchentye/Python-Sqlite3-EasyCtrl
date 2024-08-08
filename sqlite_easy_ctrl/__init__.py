@@ -292,3 +292,36 @@ class DataBaseSqlit:
         if self.__DataBase__.get(Tag) is not None:
             self.__DataBase__[Tag]["Conn"].close()
             del self.__DataBase__[Tag]
+
+    def TableExists(self, Tag: str, TableName: str) -> bool:
+            """
+            检查数据库中是否存在指定的表
+
+            Args:
+                Tag (str): 数据库的标签
+                TableName (str): 数据库的表名
+
+            Raises:
+                DataBaseTagIsNull: Tag不能为空
+
+            Returns:
+                bool: 如果表存在返回 True，否则返回 False
+            """
+            if not self.__DataBase__.get(Tag):
+                raise self.DataBaseTagIsNull("数据库标签不存在!")
+            
+            cursor: sqlite3.Cursor = self.__DataBase__[Tag]["Conn"].cursor()
+            cursor.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name='{TableName}'")
+            return cursor.fetchone() is not None
+    
+    def TagExists(self, Tag: str) -> bool:
+        """
+        通过数据库标签检查数据库是否存在
+
+        Args:
+            Tag (str): 数据库的标签
+
+        Returns:
+            bool: 如果数据库存在返回 True，否则返回 False
+        """
+        return self.__DataBase__.get(Tag) is not None
